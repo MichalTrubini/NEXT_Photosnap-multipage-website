@@ -13,21 +13,21 @@ const Header = () => {
         <div>
           <Image src={logo} alt="photosnap" />
         </div>
-        <div className={styles.nav}>
-          <ul className={styles.list}>
-            <Link href="/">
-              <li className={styles.list_item}>stories</li>
-            </Link>
-            <Link href="/">
-              <li className={styles.list_item}>features</li>
-            </Link>
-            <Link href="/">
-              <li className={styles.list_item}>pricing</li>
-            </Link>
-          </ul>
-          <Button className={`${styles.button_header} button_dark`}>get an invite</Button>
-        </div>
-        <div>
+        <ul className={styles.list}>
+          <Link href="/">
+            <li className={styles.list_item}>stories</li>
+          </Link>
+          <Link href="/">
+            <li className={styles.list_item}>features</li>
+          </Link>
+          <Link href="/">
+            <li className={styles.list_item}>pricing</li>
+          </Link>
+        </ul>
+        <Button className={`${styles.button_header} button_dark`}>
+          get an invite
+        </Button>
+        <div className={styles.hamburger}>
           <Image src={hamburger} alt="menu" />
         </div>
       </div>
