@@ -17,7 +17,6 @@
     z-index: 99;
     background-color: var(--white);
     width: 100%;
-
 }
 
 .list {
@@ -51,6 +50,9 @@
     left: 50%;
     transform: translateX(-50%);
     display: none;
+    font-size: 1.5rem;
+    letter-spacing: 2.5px;
+    padding: 1.4rem 0;
 }
 
 .button_header::before {
@@ -72,6 +74,7 @@
         width: auto;
         display: flex;
         flex-direction: row;
+        gap: 3.7rem;
         align-items: center;
         margin: 0;
         padding: 0;
@@ -81,10 +84,26 @@
         position: unset;
         width: 100%;
         max-width: 15.8rem;
-        transform: translateX(0%)
+        transform: translateX(0%);
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        padding: 1.2rem 2.4rem;
     }
 
     .button_header::before {
         display: none;
+    }
+
+    .list_item {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        padding: 2.8rem 0;
+        max-width: 110rem;
+        margin: auto;
+
     }
 }
