@@ -23,7 +23,7 @@ const Header = () => {
       <header className={styles.header}>
         <div className={styles.container}>
           <div>
-            <Image src={logo} alt="photosnap" />
+            <Link href='/'><a><Image src={logo} alt="photosnap" /></a></Link>
           </div>
           <ul
             className={
@@ -32,13 +32,13 @@ const Header = () => {
                 : styles.list
             }
           >
-            <Link href="/">
+            <Link href="/stories">
               <li className={styles.list_item}>stories</li>
             </Link>
-            <Link href="/">
+            <Link href="/features">
               <li className={styles.list_item}>features</li>
             </Link>
-            <Link href="/">
+            <Link href="/pricing">
               <li className={styles.list_item}>pricing</li>
             </Link>
           </ul>

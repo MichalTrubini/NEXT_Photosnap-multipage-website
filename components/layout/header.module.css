@@ -1,5 +1,7 @@
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     text-align: center;
     z-index: 99;
     background-color: var(--white);
@@ -30,12 +32,12 @@
     position: absolute;
     top: 74px;
     left: 0;
-    z-index: 99;
+    z-index: -99;
     background-color: var(--white);
     width: 100%;
     opacity: 0;
     transition: all 0.5s ease-out;
-    transform: translateY(0%);
+    transform: translateY(-100%);
 }
 
 .list_visible {
@@ -62,6 +64,7 @@
     letter-spacing: 2.5px;
     padding: 1.4rem 0;
     opacity: 0;
+    transition: all 0.5s ease-out;
 }
 
 .button_header_visible {

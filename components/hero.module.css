@@ -1,0 +1,70 @@
+.hero {
+    margin-top: 7.4rem;
+}
+
+.content {
+    background-color: var(--black);
+    padding: 4.8rem 2.8rem;
+    position: relative;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4rem;
+    letter-spacing: 3.33px;
+    color: var(--white);
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+}
+
+.text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: var(--white);
+    opacity: 0.6;
+    margin-bottom: 2.3rem;
+}
+
+.imageContainer {
+    font-size: 0;
+}
+
+.arrow {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
+    hue-rotate(252deg) brightness(104%) contrast(103%);
+}
+
+.cta {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.cta_text {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.date {
+    margin-bottom: 2.4rem;
+    color: rgba(255,255,255,0.75);
+    font-size: 1.3rem;
+}
+
+.author {
+    color: var(--white);
+    padding-left: 0.9rem;
+}
+
+.subtitle {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1.6rem;
+}
