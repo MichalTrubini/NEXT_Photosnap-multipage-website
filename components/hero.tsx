@@ -5,7 +5,8 @@ interface HeroProps {
     header?: string;
     text?: string;
     cta?: string;
-    className?: string;
+    classNameContent?: string;
+    classNameImage?: string;
     date?:string;
     author?: string;
     none?:string;
@@ -20,10 +21,10 @@ import arrow from "../public/assets/shared/desktop/arrow.svg";
 const Hero:React.FC<HeroProps> = (props) => {
     return (
         <div className={styles.hero}>
-            <div className={styles.imageContainer}>
-                <Image src={props.src} alt={props.alt} />
+            <div className={`${styles.imageContainer} ${props.classNameImage}`}>
+                <Image src={props.src} alt={props.alt} layout='fill' className={styles.image}/>
             </div>
-            <div className={`${styles.content} ${props.className}`}>
+            <div className={`${styles.content} ${props.classNameContent}`}>
                 <p className={`${styles.subtitle} ${props.none}`}>{props.subtitle}</p>
                 <h1 className={styles.header}>{props.header}</h1>
                 <p className={`${styles.date} ${props.none}`}>{props.date}<span className={styles.author}>{props.author}</span></p>

@@ -8,7 +8,7 @@
 }
 
 .container {
-    padding: 2.8rem 2.4rem;
+    padding: 2.7rem 2.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,7 +32,7 @@
     position: absolute;
     top: 74px;
     left: 0;
-    z-index: -99;
+
     background-color: var(--white);
     width: 100%;
     opacity: 0;
@@ -42,7 +42,7 @@
 
 .list_visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .list_item {
@@ -96,6 +96,11 @@
     .hamburger {
         display: none;
     }
+
+    .container {
+        padding: 1.6rem 2.4rem;
+    }
+
     .list {
         position: unset;
         width: auto;
@@ -105,16 +110,20 @@
         align-items: center;
         margin: 0;
         padding: 0;
+        opacity: 1;
+        transform: translateY(0%);
     }
+
     .button_header {
         display: block;
         position: unset;
         width: 100%;
         max-width: 15.8rem;
-        transform: translateX(0%);
+        transform: translateY(0%);
         font-size: 1.2rem;
         letter-spacing: 2px;
         padding: 1.2rem 2.4rem;
+        opacity: 1;
     }
 
     .button_header::before {
@@ -124,13 +133,18 @@
     .list_item {
         font-size: 1.2rem;
     }
+
+    .header {
+        font-size: 2rem;
+    }
 }
+
+
 
 @media screen and (min-width: 1440px) {
     .container {
-        padding: 2.8rem 0;
+        padding: 1.6rem 0;
         max-width: 110rem;
         margin: auto;
-
     }
 }

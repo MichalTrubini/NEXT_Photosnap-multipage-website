@@ -1,33 +1,35 @@
 .hero {
-    margin-top: 7.4rem;
+  margin-top: 7.2rem;
 }
 
 .content {
-    background-color: var(--black);
-    padding: 4.8rem 2.8rem;
-    position: relative;
+  background-color: var(--black);
+  padding: 7.2rem 2.8rem;
+  position: relative;
 }
 
 .header {
-    font-weight: 700;
-    font-size: 3.2rem;
-    line-height: 4rem;
-    letter-spacing: 3.33px;
-    color: var(--white);
-    margin-bottom: 1.6rem;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  letter-spacing: 3.33px;
+  color: var(--white);
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
 }
 
 .text {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    color: var(--white);
-    opacity: 0.6;
-    margin-bottom: 2.3rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--white);
+  opacity: 0.6;
 }
 
 .imageContainer {
-    font-size: 0;
+  font-size: 0;
+  position: relative;
+  width: 100%;
+  min-height: 294px;
 }
 
 .arrow {
@@ -36,35 +38,100 @@
 }
 
 .cta {
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    gap: 1.8rem;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  margin-top: 2.3rem;
 }
 
 .cta_text {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.2rem;
-    font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .date {
-    margin-bottom: 2.4rem;
-    color: rgba(255,255,255,0.75);
-    font-size: 1.3rem;
+  margin-bottom: 2.4rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.3rem;
 }
 
 .author {
-    color: var(--white);
-    padding-left: 0.9rem;
+  color: var(--white);
+  padding-left: 0.9rem;
 }
 
 .subtitle {
-    color: var(--white);
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 1.6rem;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1.6rem;
+}
+
+.image {
+    object-fit: cover;
+}
+
+@media screen and (min-width: 525px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .imageContainer {
+    width: 35%;
+  }
+
+  .content {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+@media screen and (min-width: 625px) {
+    .header {
+      font-size: 4rem;
+      line-height: 4.8rem;
+      margin-bottom: 2.1rem;
+    }
+  
+    .cta {
+      margin-top: 4.8rem;
+    }
+
+    .content {
+      padding: 17.3rem 5.4rem;
+    }
+  }
+
+@media screen and (min-width: 769px) {
+  .imageContainer {
+    width: 40%;
+  }
+
+  .content {
+    width: 60%;
+    padding: 17.3rem 11.2rem;
+  }
+
+  .hero {
+    margin-top: 7.2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .imageContainer {
+    width: 57.64%;
+  }
+
+  .content {
+    width: 42.36%;
+  }
 }

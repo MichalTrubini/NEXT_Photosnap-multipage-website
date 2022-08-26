@@ -44,10 +44,6 @@ li {
   display: none!important;
 }
 
-.pdg_fix {
-  padding: 7.2rem 2.4rem 3.3rem!important;
-}
-
 .divider::before {
   content: '';
   display:block;
@@ -56,4 +52,18 @@ li {
   position: absolute;
   top: 0;
   background: linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+}
+
+@media screen and (min-width:525px) {
+
+  .divider::before {
+    content: '';
+    display:block;
+    height: 144px;
+    width: 6px;
+    position: absolute;
+    top: unset;
+    left: 0;
+    background: linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+  }
 }

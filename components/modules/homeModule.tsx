@@ -1,11 +1,11 @@
 import Hero from "../hero";
-import HeroImageMobile from '../../public/assets/stories/mobile/moon-of-appalacia.jpg';
-import HeroImageTablet from '../../public/assets/stories/tablet/moon-of-appalacia.jpg';
-import HeroImageDesktop from '../../public/assets/stories/desktop/moon-of-appalacia.jpg';
-import styles from './stories.module.css'
 import { useEffect, useState } from "react";
+import HeroImageMobile from '../../public/assets/home/mobile/create-and-share.jpg';
+import HeroImageTablet from '../../public/assets/home/tablet/create-and-share.jpg';
+import HeroImageDesktop from '../../public/assets/home/desktop/create-and-share.jpg';
+import styles from './home.module.css'
 
-const StoriesModule = () => {
+const HomeModule = () => {
 
     const [screenWidth, setScreenWidth] = useState(0);
 
@@ -36,19 +36,17 @@ const StoriesModule = () => {
     return (
         <>
             <Hero 
+                className='divider'
                 src={imageSelector()}
-                alt='moon over appalachia'
-                subtitle="last month's featured story"
-                header='HAZY FULL MOON OF APPALACHIA'
-                date="March 2nd 2020"
-                author="by John Appleseed"
-                text='The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.'
-                cta="READ THE STORY"
-                classNameContent={styles.content}
-                classNameImage={styles.image}
+                alt='create and share'
+                header='Create and share your photo stories.'
+                text="Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others."
+                cta="get an invite"
+                none='none'
+                
             />
         </>
     )
 }
 
-export default StoriesModule;
+export default HomeModule;

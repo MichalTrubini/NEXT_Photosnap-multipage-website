@@ -15,8 +15,6 @@ const Header = () => {
     setMenuVisible((prevState) => !prevState);
   };
 
-  console.log(menuVisible);
-
   return (
     <>
       {menuVisible && <div className={styles.overlay}></div>}
