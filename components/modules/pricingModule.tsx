@@ -1,29 +1,12 @@
 import Hero from "../hero";
-import { useEffect, useState } from "react";
 import HeroImageMobile from '../../public/assets/pricing/mobile/hero.jpg';
 import HeroImageTablet from '../../public/assets/pricing/tablet/hero.jpg';
 import HeroImageDesktop from '../../public/assets/pricing/desktop/hero.jpg';
+import ScreenDimensions from "../../utils/screenDimensions";
 
 const PricingModule = () => {
 
-    const [screenWidth, setScreenWidth] = useState(0);
-
-    useEffect(() => {
-      const widthInitial = window.innerWidth;
-      setScreenWidth(widthInitial);
-  
-      function getWindowDimensions() {
-        const widthCurrent = window.innerWidth;
-        return widthCurrent;
-      }
-  
-      function handleResize() {
-        setScreenWidth(getWindowDimensions());
-      }
-  
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    const screenWidth = ScreenDimensions();
 
     const imageSelector = () => {
         if (screenWidth < 376) return HeroImageMobile;
@@ -35,7 +18,7 @@ const PricingModule = () => {
     return (
         <>
             <Hero 
-                className='divider'
+                classNameContent='divider'
                 src={imageSelector()}
                 alt='hero'
                 header='pricing'
