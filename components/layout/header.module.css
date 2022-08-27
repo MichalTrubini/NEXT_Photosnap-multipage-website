@@ -30,14 +30,13 @@
     padding: 3.2rem 3.2rem 12rem;
     margin-bottom: 2rem;
     position: absolute;
-    top: 74px;
+    top: 72px;
     left: 0;
-
     background-color: var(--white);
     width: 100%;
     opacity: 0;
     transition: all 0.5s ease-out;
-    transform: translateY(-100%);
+    transform: translateY(-150%);
 }
 
 .list_visible {

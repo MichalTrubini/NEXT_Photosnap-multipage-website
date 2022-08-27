@@ -1,0 +1,35 @@
+.mrg_fix {
+    margin-top: 0;
+}
+
+.content {
+    background-color: var(--white);
+}
+
+.header, .text, .cta_text {
+    color: var(--black)!important;
+}
+
+.arrow {
+    filter: invert(0%) sepia(100%) saturate(7439%) hue-rotate(200deg) brightness(108%) contrast(113%);
+}
+
+@media screen and (min-width:525px) {
+    .reverse {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width:1110px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
