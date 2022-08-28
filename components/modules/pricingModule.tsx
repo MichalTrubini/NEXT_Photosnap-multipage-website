@@ -3,6 +3,7 @@ import HeroImageMobile from '../../public/assets/pricing/mobile/hero.jpg';
 import HeroImageTablet from '../../public/assets/pricing/tablet/hero.jpg';
 import HeroImageDesktop from '../../public/assets/pricing/desktop/hero.jpg';
 import ScreenDimensions from "../../utils/screenDimensions";
+import Beta from "../beta";
 
 const PricingModule = () => {
 
@@ -26,6 +27,7 @@ const PricingModule = () => {
                 noArrow='none'
                 none='none'
             />
+            <Beta />
         </>
     )
 }

@@ -1,0 +1,69 @@
+.beta {
+  color: var(--white);
+  background: url("../public/assets/shared/mobile/bg-beta.jpg") no-repeat
+    center/cover;
+  position: relative;
+}
+.container {
+  padding: 6.4rem 3.2rem;
+}
+
+.header {
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  letter-spacing: 3px;
+  margin-bottom: 2.4rem;
+}
+
+.arrow {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
+    hue-rotate(252deg) brightness(104%) contrast(103%);
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.cta_text {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .beta {
+    background: url("../public/assets/shared/tablet/bg-beta.jpg") no-repeat
+      center/cover;
+  }
+  .container {
+    padding: 6.9rem 3.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    letter-spacing: 4.2px;
+    margin-bottom: 0;
+    width: 58%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .beta {
+    background: url("../public/assets/shared/desktop/bg-beta.jpg") no-repeat
+      center/cover;
+  }
+  .container {
+    padding: 6.8rem 0;
+    max-width: 111rem;
+    margin: auto;
+  }
+  .header {
+    width: 40%;
+  }
+}

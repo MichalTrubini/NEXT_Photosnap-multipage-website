@@ -54,12 +54,35 @@ li {
   background: linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
 }
 
+.dividerTwo::before {
+  content: '';
+  display:block;
+  height: 6px;
+  width: 128px;
+  position: absolute;
+  top: 0;
+  left: 3.2rem;
+  background: linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+}
+
 @media screen and (min-width:525px) {
 
   .divider::before {
     content: '';
     display:block;
     height: 144px;
+    width: 6px;
+    position: absolute;
+    top: unset;
+    left: 0;
+    background: linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+  }
+
+  .dividerTwo::before {
+    content: '';
+    display:block;
+    height: 100%;
+    top: 0;
     width: 6px;
     position: absolute;
     top: unset;

@@ -1,0 +1,25 @@
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 5.6rem;
+    padding: 6.4rem 0 9.1rem;
+}
+
+@media screen and (min-width:768px) {
+    .features {
+        grid-template-columns: 1fr 1fr;
+        gap: 7.1rem 1.1rem;
+        padding: 11.2rem 3.9rem;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10.4rem 3rem;
+        padding: 16rem 0;
+        max-width: 111rem;
+        margin: auto;
+    }
+}

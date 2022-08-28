@@ -10,8 +10,13 @@ import HeroImageTabletThree from "../../public/assets/home/tablet/designed-for-e
 import HeroImageDesktopThree from "../../public/assets/home/desktop/designed-for-everyone.jpg";
 import ScreenDimensions from "../../utils/screenDimensions";
 
+import responsive from '../../public/assets/features/desktop/responsive.svg'
+import noLimit from '../../public/assets/features/desktop/no-limit.svg'
+import embded from '../../public/assets/features/desktop/embed.svg'
+
 import styles from "./home.module.css";
 import StoryTemplate from "../storyTemplate";
+import FeatureTemplate from "../featureTemplate";
 
 const HomeModule = () => {
   const screenWidth = ScreenDimensions();
@@ -68,6 +73,27 @@ const HomeModule = () => {
     }
   ];
 
+  const featuresData = [
+    {
+      id: 1,
+      src: responsive,
+      header: '100% Responsive',
+      text:'No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.'
+    },
+    {
+      id: 2,
+      src: noLimit,
+      header: 'No Photo Upload Limit',
+      text:'Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.'
+    },
+    {
+      id: 3,
+      src: embded,
+      header: 'Available to Embed',
+      text:'Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.'
+    }
+  ]
+
   return (
     <>
       <Hero
@@ -119,6 +145,17 @@ const HomeModule = () => {
             alt={image.header}
           />
         ))}
+      </div>
+      <div className={styles.features}>
+          {featuresData.map((feature) => (
+            <FeatureTemplate 
+            key={feature.id}
+            src={feature.src}
+            alt={feature.header}
+            header={feature.header}
+            text={feature.text}
+            />
+          ))}
       </div>
     </>
   );
