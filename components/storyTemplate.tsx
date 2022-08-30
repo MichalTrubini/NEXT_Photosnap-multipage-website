@@ -26,7 +26,7 @@ const StoryTemplate: React.FC<StoryTemplateProps> = (props) => {
       </div>
       <div className={styles.content}>
         <p className={styles.date}>{props.date}</p>
-        <h3 className={styles.header}>{props.header}</h3>
+        <h2 className={styles.header}>{props.header}</h2>
         <p className={styles.author}>{"by " + props.author}</p>
         <div className={styles.cta}>
           <p className={styles.cta_text}>read the story</p>
