@@ -10,7 +10,7 @@
 }
 
 .card_basic, .card_business {
-    background-color: var(--lightGrey);
+    background-color: #F5F5F5;
 }
 
 .card_pro {
@@ -35,6 +35,7 @@
     letter-spacing: 2px;
     line-height: 1.6rem;
     padding: 1.2rem 0;
+    transition: all 0.5s;
 }
 
 .button_light {
@@ -44,6 +45,7 @@
     letter-spacing: 2px;
     line-height: 1.6rem;
     padding: 1.2rem 0;
+    transition: all 0.5s;
 }
 
 .light {
@@ -109,6 +111,27 @@
     }
 }
 
+@media screen and (min-width:768px) {
+    .pricing {
+        padding: 11.2rem 3.9rem;
+    }
+
+    .toggler:hover {
+        cursor: pointer;
+    }
+
+    .button_light:hover {
+        cursor: pointer;
+        background-color: var(--lightGrey);
+    }
+
+    .button_dark:hover {
+        cursor: pointer;
+        background-color: var(--lightGrey);
+        color: var(--black);
+    }
+}
+
 @media screen and (min-width: 1000px) {
     .cards {
         flex-direction: row;
@@ -119,7 +142,7 @@
     }
 
     .card_pro {
-        padding: 8.8rem 4rem 7.1rem;
+        padding: 8.8rem 4rem 7.1rem!important;
     }
 
     .card_pro::before {
@@ -129,5 +152,11 @@
 
     .card_basic, .card_business {
         padding: 5.6rem 4rem 4rem;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .pricing {
+        padding: 12rem 0 16rem;
     }
 }

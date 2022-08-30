@@ -124,6 +124,11 @@
   .hero {
     margin-top: 7.2rem;
   }
+
+  .cta_text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 1440px) {

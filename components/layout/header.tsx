@@ -6,7 +6,7 @@ import close from "../../public/assets/shared/mobile/close.svg";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -14,6 +14,10 @@ const Header = () => {
   const mobileMenuHandler = () => {
     setMenuVisible((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    menuVisible === true ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible";
+},[menuVisible]) 
 
   return (
     <>
@@ -31,13 +35,13 @@ const Header = () => {
             }
           >
             <Link href="/stories">
-              <li className={styles.list_item}>stories</li>
+              <li className={styles.list_item} onClick={mobileMenuHandler}>stories</li>
             </Link>
             <Link href="/features">
-              <li className={styles.list_item}>features</li>
+              <li className={styles.list_item} onClick={mobileMenuHandler}>features</li>
             </Link>
             <Link href="/pricing">
-              <li className={styles.list_item}>pricing</li>
+              <li className={styles.list_item} onClick={mobileMenuHandler}>pricing</li>
             </Link>
           </ul>
           <Button

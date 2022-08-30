@@ -51,6 +51,11 @@
     margin-bottom: 0;
     width: 58%;
   }
+
+  .cta_text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 1150px) {

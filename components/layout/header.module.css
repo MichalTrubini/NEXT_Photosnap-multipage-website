@@ -133,6 +133,17 @@
         font-size: 1.2rem;
     }
 
+    .list_item:hover {
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .button_header:hover {
+        cursor: pointer;
+        background-color: var(--lightGrey);
+        color: var(--black);
+    }
+
     .header {
         font-size: 2rem;
     }

@@ -7,6 +7,7 @@ import Beta from "../beta";
 import styles from "./pricing.module.css";
 import PricingCardTemplate from "../pricingCardTemplate";
 import { useState } from "react";
+import Comparison from "../comparison";
 
 const PricingModule = () => {
   const screenWidth = ScreenDimensions();
@@ -109,8 +110,14 @@ const PricingModule = () => {
               key={card.id}
               header={card.type}
               text={card.text}
-              price={frequency ? `$${card.priceMonthly}` : `$${card.priceYearly}`}
-              frequency={frequency ? `${card.frequencyMonthly}` : `${card.frequencyYearly}`}
+              price={
+                frequency ? `$${card.priceMonthly}` : `$${card.priceYearly}`
+              }
+              frequency={
+                frequency
+                  ? `${card.frequencyMonthly}`
+                  : `${card.frequencyYearly}`
+              }
               classNameCard={styles[card.classNameCard]}
               classNameButton={styles[card.classNameButton]}
               classNameColor={styles[card.classNameColor]}
@@ -119,6 +126,7 @@ const PricingModule = () => {
           ))}
         </div>
       </div>
+      <Comparison />
       <Beta />
     </>
   );

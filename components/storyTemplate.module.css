@@ -1,5 +1,6 @@
 .container {
     position: relative;
+    transition: transform 1s;
 }
 
 .image_container {
@@ -59,7 +60,21 @@
     hue-rotate(252deg) brightness(104%) contrast(103%);
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:768px) {
+    .container:hover {
+        cursor: pointer;
+        transform: translateY(-24px);
+    }
 
-    
+    .container:hover::before {
+        content: '';
+        display:block;
+        height: 6px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+        background: linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+    }
 }
