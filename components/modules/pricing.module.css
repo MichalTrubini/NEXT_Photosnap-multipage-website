@@ -9,12 +9,23 @@
     margin-top: 4rem;
 }
 
-.card_light {
+.card_basic, .card_business {
     background-color: var(--lightGrey);
 }
 
-.card_dark {
+.card_pro {
     background-color: var(--black);
+}
+
+.card_pro::before {
+    content: '';
+    display:block;
+    height: 6px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(26.57deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
 }
 
 .button_dark {
@@ -45,4 +56,78 @@
 
 .text_light {
     color: rgba(255, 255, 255, 0.6);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    color: rgba(0,0,0,0.5);
+}
+
+.text_clicked{
+    color: var(--black);
+}
+
+.toggler {
+    width: 64px;
+    height: 32px;
+    background-color: var(--lightGrey);
+    border-radius: 1.6rem;
+    position: relative;
+}
+
+.toggle {
+    width: 24px;
+    height: 24px;
+    background-color: var(--black);
+    border-radius: 100%;
+    position: absolute;
+    top: 4px;
+    transition: all 500ms;
+}
+
+.toggle_left {
+    left: 4px;
+}
+
+.toggle_right {
+    left: 36px;
+}
+
+@media screen and (min-width:555px) {
+    .card_pro::before {
+        height: 100%;
+        width: 6px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .cards {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 4.8rem;
+    }
+
+    .card_pro {
+        padding: 8.8rem 4rem 7.1rem;
+    }
+
+    .card_pro::before {
+        height: 6px;
+        width: 100%;
+    }
+
+    .card_basic, .card_business {
+        padding: 5.6rem 4rem 4rem;
+    }
 }

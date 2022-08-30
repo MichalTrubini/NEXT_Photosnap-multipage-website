@@ -1,30 +1,100 @@
 .card {
-    padding: 5.6rem 2.2rem 4rem;
-    text-align: center;
+  padding: 5.6rem 2.2rem 4rem;
+  position: relative;
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "a"
+    "b"
+    "c";
+}
+
+.top {
+  grid-area: a;
+}
+
+.middle {
+  grid-area: b;
+}
+
+.bottom {
+  grid-area: c;
 }
 
 .header {
-    font-size: 2.4rem;
-    line-height: 2.5rem;
-    margin-bottom: 1.8rem;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .text {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    margin-bottom: 4rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 4rem;
 }
 
 .price {
-    font-size: 4rem;
-    line-height: 4.8rem;
-    font-weight: 700;
-    letter-spacing: 4.17px;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  font-weight: 700;
+  letter-spacing: 4.17px;
 }
 
 .frequency {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    color: rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 555px) {
+  .card {
+    grid-template-areas:
+      "a b"
+      "c b";
+      padding: 4rem;
+  }
+
+  .top {
+    text-align: left;
+    width: 27rem;
+  }
+
+  .middle {
+    text-align: right;
+  }
+
+  .bottom {
+    width: 27rem;
+  }
+
+  .text {
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card {
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+    max-width: 35rem;
+  }
+
+  .top {
+    text-align: center;
+    width: auto;
+  }
+
+  .middle {
+    text-align: center;
+  }
+
+  .bottom {
+    width: auto;
+  }
+
+  .text {
     margin-bottom: 4rem;
+  }
 }
