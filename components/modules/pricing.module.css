@@ -1,0 +1,48 @@
+.pricing {
+    padding: 6.4rem 2.9rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-top: 4rem;
+}
+
+.card_light {
+    background-color: var(--lightGrey);
+}
+
+.card_dark {
+    background-color: var(--black);
+}
+
+.button_dark {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    line-height: 1.6rem;
+    padding: 1.2rem 0;
+}
+
+.button_light {
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    line-height: 1.6rem;
+    padding: 1.2rem 0;
+}
+
+.light {
+    color: var(--white);
+}
+
+.text_dark {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.text_light {
+    color: rgba(255, 255, 255, 0.6);
+}

@@ -2,7 +2,7 @@ import styles from './button.module.css';
 
 interface ButtonProps {
     children?: React.ReactNode;
-    className: string;
+    className?: string;
 }
 
 const Button:React.FC<ButtonProps> = (props) => {

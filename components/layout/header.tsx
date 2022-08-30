@@ -5,7 +5,7 @@ import close from "../../public/assets/shared/mobile/close.svg";
 
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../button";
+import Button from "../ui/button";
 import { useState } from "react";
 
 const Header = () => {
