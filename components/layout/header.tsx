@@ -9,10 +9,30 @@ import Button from "../ui/button";
 import { useState, useEffect } from "react";
 
 const Header = () => {
+
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    const widthInitial = window.innerWidth;
+    setScreenWidth(widthInitial);
+
+    function getWindowDimensions() {
+      const widthCurrent = window.innerWidth;
+      return widthCurrent;
+    }
+
+    function handleResize() {
+      setScreenWidth(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const [menuVisible, setMenuVisible] = useState(false);
 
   const mobileMenuHandler = () => {
-    setMenuVisible((prevState) => !prevState);
+    if (screenWidth < 769) setMenuVisible((prevState) => !prevState);
   };
 
   useEffect(() => {
